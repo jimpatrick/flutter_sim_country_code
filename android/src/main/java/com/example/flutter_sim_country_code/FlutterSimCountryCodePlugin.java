@@ -1,4 +1,4 @@
-package android.src.main.java.com.example.flutter_sim_country_code;
+package com.example.flutter_sim_country_code;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
