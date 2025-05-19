@@ -28,6 +28,7 @@ public class FlutterSimCountryCodePlugin implements FlutterPlugin, MethodCallHan
 
   @Override
   public void onMethodCall(MethodCall call, @NonNull Result result) {
+
     if (call.method.equals("getSimCountryCode")) {
       getSimCountryCode(result);
     } else {
@@ -54,10 +55,8 @@ public class FlutterSimCountryCodePlugin implements FlutterPlugin, MethodCallHan
 
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
-    if (mChannel != null) {
-      mChannel.setMethodCallHandler(null);
-      mChannel = null;
-    }
+    mChannel.setMethodCallHandler(null);
+    mChannel = null;
     mContext = null;
   }
 }
